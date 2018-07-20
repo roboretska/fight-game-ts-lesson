@@ -3,8 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Typescript</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: row;
+        }
+        #set-parameters {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+        }
+        .inputs-wrapper{
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+            font-size: 16px;
+
+        }
+        label, p{
+            display: block;
+            min-width: 100%;
+        }
+        label{
+            margin-top: 10px;
+        }
+        #fighter-submit{
+            width: 150px;
+            padding: 5px 15px;
+            margin: 30px 0;
+            font-size: 20px;
+        }
+        #fighter-parameters{
+            margin-bottom: 30px;
+        }
+        #last-info{
+            padding-bottom: 15px;
+        }
+        #results-block{
+            padding-top: 15px;
+        }
+    </style>
 </head>
 <body>
-<h3>Hi</h3>
+<div id="set-parameters">
+    <div class="inputs-wrapper">
+        <div id="fighter-parameters">
+            <label for="fighter-name">Fighter name:</label>
+            <input id="fighter-name" value="Johnny">
+            <label for="fighter-health">Fighter health</label>
+            <input id="fighter-health" value="200">
+            <label for="fighter-power">Fighter power</label>
+            <input id="fighter-power" value="10">
+        </div>
+        <div id="imp-fighter-parameters">
+            <label for="imp-fighter-name">Improved fighter name:</label>
+            <input id="imp-fighter-name" value="Tony">
+            <label for="imp-fighter-health">Improved fighter health</label>
+            <input id="imp-fighter-health" value="200">
+            <label for="imp-fighter-power">Improved fighter power</label>
+            <input id="imp-fighter-power" value="10"></div>
+        <button id="fighter-submit">Start fight</button>
+    </div>
+</div>
+
+
+<div id="buttle-log"></div>
+
 </body>
 </html>
