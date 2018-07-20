@@ -18,7 +18,7 @@ export default async function fight(fighter:any, improvedFighter:any, ...points:
     fighterInfo.innerHTML = `Fighter stats. Name: ${fighter.name}, health: ${fighter.health}, power: ${fighter.power}.`;
     impFighterInfo.innerHTML = `Improved fighter stats. Name: ${improvedFighter.name}, health: ${improvedFighter.health}, power: ${improvedFighter.power}.`;
 
-
+fighter.setDamage(45);
     for (let point of points) {
         while (fighter.health > 0 && improvedFighter.health > 0) {
             fighter.hit(improvedFighter, point);

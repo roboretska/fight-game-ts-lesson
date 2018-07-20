@@ -13,9 +13,7 @@ export  class Fighter implements IFighter{
     power: number;
 
     constructor(name : string, health: number=200, power:number=10){
-        this.name = name;
-        this.health = health;
-        this.power = power;
+        this.__SetParams(name, health, power);
     }
 
     setDamage(damage:number):any{
@@ -49,5 +47,9 @@ export  class Fighter implements IFighter{
             }, 500)
         });
     };
-
+    private __SetParams(name : string, health: number, power:number){
+        this.name = name;
+        this.health = health;
+        this.power = power;
+    }
 }
