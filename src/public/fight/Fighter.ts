@@ -32,15 +32,15 @@ export  class Fighter implements IFighter{
     };
     knockout(enemy:any):Promise<string>{
         return new Promise<string>((resolve)=>{
-            let conteiner = document.getElementById("buttle-log");
+            let container = document.getElementById("buttle-log");
             let log = document.createElement('p');
             log.setAttribute('id', 'results-block');
-            conteiner.appendChild(log);
+            container.appendChild(log);
             log.innerHTML = `${enemy.name} has been knockout by ${this.name}`;
             console.log(`${enemy.name} has been knockout by ${this.name}`)
             setTimeout(()=>{
                 let timeover = document.createElement('p');
-                conteiner.appendChild(timeover);
+                container.appendChild(timeover);
                 timeover.innerHTML='Time is over';
                 console.log("Time is over");
                 resolve();
